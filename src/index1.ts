@@ -131,9 +131,17 @@
 //     bark:true
 // }
 
-let h:number[]=[]
-h.push(1)
-console.log(h)
-h.push(2)
-console.log(h)
-h.push("a")
+// let h:number[]=[]
+// h.push(1)
+// console.log(h)
+// h.push(2)
+// console.log(h)
+// h.push("a")
+
+
+function trueOrnull(isTrue:boolean){
+    if(isTrue){
+        return "true1"
+    } return null
+}
+console.log(trueOrnull(true));
