@@ -91,4 +91,15 @@
 // a.fname
 // a.fname="ahmad"             // cannot assign because its readonly
 // console.log(a.fname)
+type Age = number
+type Person ={ 
+    fname:string
+    age:Age
+}
+let age:Age =55
 
+let driver:Person ={
+    fname:"ali",
+    age:age
+}
+console.log(driver.age)
