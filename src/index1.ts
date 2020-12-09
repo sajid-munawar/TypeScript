@@ -45,12 +45,19 @@
 // }
 // let c = new Person ("sajid","ali")
 // console.log(c.firstname)
-class Student {
-    constructor( public name:string,
-        public rollNo:number,
-        public course:string){}
-}
-let std1=new Student ("ali",5,"javascript")
-console.log(std1.name)
-console.log(std1.rollNo)
-console.log(std1.course)
+
+
+// class Student {
+//     constructor( public name:string,
+//         public rollNo:number,
+//         public course:string){}
+// }
+// let std1=new Student ("ali",5,"javascript")
+// console.log(std1.name)
+// console.log(std1.rollNo)
+// console.log(std1.course)
+
+let a:{b:string}
+a ={}  // if we miss a parameter then error
+a={b:"ali"}
+a={b:"aa",c:"dd"} //if we give extra parameter then error

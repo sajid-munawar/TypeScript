@@ -38,15 +38,16 @@
 // }
 // let c = new Person ("sajid","ali")
 // console.log(c.firstname)
-var Student = /** @class */ (function () {
-    function Student(name, rollNo, course) {
-        this.name = name;
-        this.rollNo = rollNo;
-        this.course = course;
-    }
-    return Student;
-}());
-var std1 = new Student("ali", 5, "javascript");
-console.log(std1.name);
-console.log(std1.rollNo);
-console.log(std1.course);
+// class Student {
+//     constructor( public name:string,
+//         public rollNo:number,
+//         public course:string){}
+// }
+// let std1=new Student ("ali",5,"javascript")
+// console.log(std1.name)
+// console.log(std1.rollNo)
+// console.log(std1.course)
+var a;
+a = {}; // if we miss a parameter then error
+a = { b: "ali" };
+a = { b: "aa", c: "dd" }; //if we give extra parameter then error
