@@ -15,8 +15,19 @@
 
 // let a:symbol = Symbol ["a"]
 
-let a:{b:string} = {
-    b:"Hello"
+// let a:{b:string} = {
+//     b:"Hello"
+// }
+// console.log(a.b)
+// console.log(a.b)
+
+type Person = {
+    fistname:string
+    lastname:string
 }
-console.log(a.b)
-console.log(a.b)
+
+let per1:Person = {
+   fistname: "sajid",
+   lastname: "munawar"
+}
+console.log(per1.fistname)
