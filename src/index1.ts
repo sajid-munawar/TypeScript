@@ -173,6 +173,23 @@
 // arr[3]=222
 // console.log(arr[3])
 
-let arr:readonly number[]=[1,2,3,4,5]
-arr[2]=5
-console.log(arr[2])
+// let arr:readonly number[]=[1,2,3,4,5]
+// arr[2]=5
+// console.log(arr[2])
+
+// // type b:readonlyArray<string>
+// type b= ReadonlyArray<string>
+// let a:ReadonlyArray<string>=["aa","bb"]
+
+// function a(){
+//     throw TypeError("I always error.")
+// }
+// let b=a()
+// console.log(b)
+
+
+function a(){
+    return null
+}
+let b=a()
+console.log(b)
