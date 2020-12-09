@@ -63,8 +63,25 @@
 // a={b:"aa",c:"dd"} //if we give extra parameter then error
 
 
-let i:number =5
-let d= i*5
-i=7
-d=4*i
-console.log(d)
+// let i:number =5
+// let d= i*5
+// i=7
+// d=4*i
+// console.log(d)
+
+// let a :{firstname:string}
+// a={firstname:"ali"}
+// console.log(a.firstname)
+// a={firstname:"ahmad"}
+// console.log(a.firstname)
+
+// let a:{readonly firstname:string}
+// a={firstname:"ali"}
+// a={firstname:"ahmad"}
+// console.log(a.firstname)
+
+let a:{readonly firstname:string} //=  {firstname:"ali"}
+
+
+let a:{readonly fname:string} = {fname:"ali"}
+a.fname="ahmad"
