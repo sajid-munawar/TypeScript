@@ -146,16 +146,33 @@
 // }
 // console.log(trueOrnull(true));
 
-function BuildArray(){
-    let a=[]
-    a.push(1),
-    a.push("aa")
-    return a
-}
-let myarray=BuildArray()
-console.log(myarray)
-myarray.push("aaa")
-myarray.push(5)
-console.log(myarray)
+// function BuildArray(){
+//     let a=[]
+//     a.push(1),
+//     a.push("aa")
+//     return a
+// }
+// let myarray=BuildArray()
+// console.log(myarray)
+// myarray.push("aaa")
+// myarray.push(5)
+// console.log(myarray)
 
 
+// let a:[firstname:string,lastname:string,age:number]=["ali","ahmad",35]
+// console.log(a[1])
+
+// let arr:[{fname:string},string,number]=[{fname:"ali"},"ahmad",25]
+// console.log(arr)
+
+// let a:[string,string?]=["aa","aaa"]
+
+// let arr: number[]=[1,2,3,4,5]
+// arr.push(4)
+// arr.unshift(4)
+// arr[3]=222
+// console.log(arr[3])
+
+let arr:readonly number[]=[1,2,3,4,5]
+arr[2]=5
+console.log(arr[2])
