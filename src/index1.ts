@@ -32,9 +32,25 @@
 // }
 // console.log(per1.fistname)
 
-let c :{firstname:string
-     lastname:string}
-      = {
-    firstname:"sajid",
-    lastname:"ali"
+// let c :{firstname:string
+//      lastname:string}
+//       = {
+//     firstname:"sajid",
+//     lastname:"ali"
+// }
+
+// class Person{
+//     constructor (public firstname:string,
+//         public lastname:string) {}
+// }
+// let c = new Person ("sajid","ali")
+// console.log(c.firstname)
+class Student {
+    constructor( public name:string,
+        public rollNo:number,
+        public course:string){}
 }
+let std1=new Student ("ali",5,"javascript")
+console.log(std1.name)
+console.log(std1.rollNo)
+console.log(std1.course)
