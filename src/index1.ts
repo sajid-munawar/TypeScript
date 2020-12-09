@@ -57,7 +57,14 @@
 // console.log(std1.rollNo)
 // console.log(std1.course)
 
-let a:{b:string}
-a ={}  // if we miss a parameter then error
-a={b:"ali"}
-a={b:"aa",c:"dd"} //if we give extra parameter then error
+// let a:{b:string}
+// a ={}  // if we miss a parameter then error
+// a={b:"ali"}
+// a={b:"aa",c:"dd"} //if we give extra parameter then error
+
+
+let i:number =5
+let d= i*5
+i=7
+d=4*i
+console.log(d)
