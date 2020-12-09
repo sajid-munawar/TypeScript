@@ -109,24 +109,31 @@
 // type color = "red"
 // type color="green"
 
-type cat = {name:string , color:true}
-type dog ={fname:string , bark:true}
+// type cat = {name:string , color:true}
+// type dog ={fname:string , bark:true}
 
-type CatOrDog = cat | dog
+// type CatOrDog = cat | dog
 
-type CatAndDog=cat & dog
+// type CatAndDog=cat & dog
 
-let a:CatOrDog ={
-    fname:"aa",
-    bark:true
-}
-a ={
-    name:"aa",
-    color:true
-}
-let b:CatAndDog = {
-    name:"aa",
-    color:true,
-    fname:"bb",
-    bark:true
-}
+// let a:CatOrDog ={
+//     fname:"aa",
+//     bark:true
+// }
+// a ={
+//     name:"aa",
+//     color:true
+// }
+// let b:CatAndDog = {
+//     name:"aa",
+//     color:true,
+//     fname:"bb",
+//     bark:true
+// }
+
+let h:number[]=[]
+h.push(1)
+console.log(h)
+h.push(2)
+console.log(h)
+h.push("a")
