@@ -21,13 +21,20 @@
 // console.log(a.b)
 // console.log(a.b)
 
-type Person = {
-    fistname:string
-    lastname:string
-}
+// type Person = {
+//     fistname:string
+//     lastname:string
+// }
 
-let per1:Person = {
-   fistname: "sajid",
-   lastname: "munawar"
+// let per1:Person = {
+//    fistname: "sajid",
+//    lastname: "munawar"
+// }
+// console.log(per1.fistname)
+
+let c :{firstname:string
+     lastname:string}
+      = {
+    firstname:"sajid",
+    lastname:"ali"
 }
-console.log(per1.fistname)
