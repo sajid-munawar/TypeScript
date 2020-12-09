@@ -139,9 +139,23 @@
 // h.push("a")
 
 
-function trueOrnull(isTrue:boolean){
-    if(isTrue){
-        return "true1"
-    } return null
+// function trueOrnull(isTrue:boolean){
+//     if(isTrue){
+//         return "true1"
+//     } return null
+// }
+// console.log(trueOrnull(true));
+
+function BuildArray(){
+    let a=[]
+    a.push(1),
+    a.push("aa")
+    return a
 }
-console.log(trueOrnull(true));
+let myarray=BuildArray()
+console.log(myarray)
+myarray.push("aaa")
+myarray.push(5)
+console.log(myarray)
+
+
