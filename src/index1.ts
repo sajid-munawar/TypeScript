@@ -80,8 +80,15 @@
 // a={firstname:"ahmad"}
 // console.log(a.firstname)
 
-let a:{readonly firstname:string} //=  {firstname:"ali"}
+// let a:{readonly firstname:string} //=  {firstname:"ali"}
 
 
-let a:{readonly fname:string} = {fname:"ali"}
-a.fname="ahmad"
+// let a:{readonly fname:string} = {fname:"ali"}
+// a.fname="ahmad"
+
+
+// let a :{readonly fname:string}={fname:"ali"}
+// a.fname
+// a.fname="ahmad"             // cannot assign because its readonly
+// console.log(a.fname)
+
