@@ -188,8 +188,25 @@
 // console.log(b)
 
 
-function a(){
-    return null
+// function a(){
+//     return null
+// }
+// let b=a()
+// console.log(b)
+
+// function a(){
+//     let b=2
+//     let c=b*b
+//     return c
+// }
+// let d=a()
+// console.log(d)
+
+enum language  {
+    english,
+    chinese,
+    urdu=55,
 }
-let b=a()
+console.log(language.urdu)
+let b:number=5*language.urdu
 console.log(b)
