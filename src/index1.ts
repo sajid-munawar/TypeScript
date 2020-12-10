@@ -246,5 +246,8 @@
 
             // Function Constructur
 
-let greet5= new Function("name", 'return "Hello " + name ')
-console.log(greet5("Sajid"))
+// let greet5= new Function("name", 'return "Hello " + name ')
+//         console.log(greet5("Sajid"))
+
+let greet6= new Function('name', 'return  "Hello "+ name')
+        console.log(greet6("Sajid"))
