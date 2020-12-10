@@ -249,5 +249,13 @@
 // let greet5= new Function("name", 'return "Hello " + name ')
 //         console.log(greet5("Sajid"))
 
-let greet6= new Function('name', 'return  "Hello "+ name')
-        console.log(greet6("Sajid"))
+// let greet6= new Function('name', 'return  "Hello "+ name')
+//         console.log(greet6("Sajid"))
+
+
+function log(message:string,userID?:string){
+    let time= new Date().toLocaleTimeString()
+    console.log(time,message,userID ||"Not signed in.") 
+}
+log(" Hello ")
+log (" hello ", "Abc")
