@@ -233,6 +233,18 @@
 
 //           Arrow function
 
-let greet3= (name:string) =>{
-    return "Hello "+name
-}
+// let greet3= (name:string) =>{
+//     return "Hello "+name
+// }
+
+//            Shortered Arrow function
+
+// let greet4= (name:string) => 
+//             "Hello "+name
+// console.log(greet4("Sajid"))
+
+
+            // Function Constructur
+
+let greet5= new Function("name", 'return "Hello " + name ')
+console.log(greet5("Sajid"))
