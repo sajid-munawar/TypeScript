@@ -285,3 +285,13 @@
 // }
 // log("Sajid")
 // log("sajid","abc")
+
+// var numbers:number[]=[2,3,4]
+// console.log(numbers.reduce())
+
+function sum (numbers:number[]):number {
+    return numbers.reduce((total,n) => total+n,0)
+}
+let a=sum([1,2,3])
+console.log(a);
+
