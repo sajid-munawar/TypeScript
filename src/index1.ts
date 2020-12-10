@@ -202,11 +202,20 @@
 // let d=a()
 // console.log(d)
 
-enum language  {
-    english,
-    chinese,
-    urdu=55,
-}
-console.log(language.urdu)
-let b:number=5*language.urdu
-console.log(b)
+// enum language  {
+//     english,
+//     chinese,
+//     urdu=55,
+// }
+// console.log(language.urdu)
+// let b:number=5*language.urdu
+// console.log(b)
+
+// enum language {
+//     "english",
+// }
+
+ //             FUNCTIONS
+ function add(a:number,b:number):number   {
+     return a+b
+ }
