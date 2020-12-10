@@ -220,8 +220,13 @@
 
 // Methods to declare function in typescipt
 
-// named function
- function greet1(name:string) {
-     return "Hello "+ name
- }
+//          Named function
+//  function greet1(name:string) {
+//      return "Hello "+ name
+//  }
 
+
+//        Function expression
+let greet2=function(name:string){
+    return "Hello "+name
+}
