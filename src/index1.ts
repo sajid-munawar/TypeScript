@@ -216,6 +216,12 @@
 // }
 
  //             FUNCTIONS
- function add(a:number,b:number):number   {
-     return a+b
+// 
+
+// Methods to declare function in typescipt
+
+// named function
+ function greet1(name:string) {
+     return "Hello "+ name
  }
+
