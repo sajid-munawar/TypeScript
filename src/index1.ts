@@ -226,7 +226,13 @@
 //  }
 
 
-//        Function expression
-let greet2=function(name:string){
+// //        Function expression
+// let greet2=function(name:string){
+//     return "Hello "+name
+// }
+
+//           Arrow function
+
+let greet3= (name:string) =>{
     return "Hello "+name
 }
