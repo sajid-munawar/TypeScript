@@ -253,9 +253,35 @@
 //         console.log(greet6("Sajid"))
 
 
-function log(message:string,userID?:string){
-    let time= new Date().toLocaleTimeString()
-    console.log(time,message,userID ||"Not signed in.") 
-}
-log(" Hello ")
-log (" hello ", "Abc")
+// function log(message:string,userID?:string){
+//     let time= new Date().toLocaleTimeString()
+//     console.log(time,message,userID ||"Not signed in.") 
+// }
+// log(" Hello ")
+// log (" hello ", "Abc")
+
+// function log(message:string,userID?:string){
+//     let time= new Date().toLocaleTimeString()
+//     console.log(time,message,if (userID) {userID+ "signed in"} else{ "Not signed in."}) 
+// }
+// log(" Hello ")
+// log (" hello ", "Abc")
+
+
+// function log(message:string,userId="Not signed in"){
+//     let time=new Date().toISOString()
+//     console.log(time,message,userId)
+// }
+// log(" a boy just "," aabbcc ")
+// log(" Hello world ")
+
+// function log(name:string,userid?:string){
+//     if (userid){
+//         console.log(name,userid+" signed in")
+//     }
+//     else {
+//         console.log(name," Not signed in")
+//     }
+// }
+// log("Sajid")
+// log("sajid","abc")
