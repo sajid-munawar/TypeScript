@@ -303,3 +303,11 @@
 // // 'readonly number[]' only permits reading.
 // as.push(6) // Error TS2339: Property 'push' does not
 // // exist on type 'readonly number[]'.
+
+
+let x = {
+    a() {
+    return this
+    }
+    }
+    x.a() // this is the object x in the body of a()
