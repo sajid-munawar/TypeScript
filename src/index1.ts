@@ -296,10 +296,10 @@
 // console.log(a);
 
 
-let as: readonly number[] = [1, 2, 3] // readonly number[]
-let bs: readonly number[] = as.concat(4) // readonly number[]
-let three = bs[2] // number
-as[4] = 5 // Error TS2542: Index signature in type
-// 'readonly number[]' only permits reading.
-as.push(6) // Error TS2339: Property 'push' does not
-// exist on type 'readonly number[]'.
+// let as: readonly number[] = [1, 2, 3] // readonly number[]
+// let bs: readonly number[] = as.concat(4) // readonly number[]
+// let three = bs[2] // number
+// as[4] = 5 // Error TS2542: Index signature in type
+// // 'readonly number[]' only permits reading.
+// as.push(6) // Error TS2339: Property 'push' does not
+// // exist on type 'readonly number[]'.
