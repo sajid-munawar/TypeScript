@@ -20,7 +20,6 @@ let f = 10.9;
 f = 22;
 let g = false;
 g = true;
-*/
 //use const where variable values do not change
 const a = 5;
 const b : number = 33;
@@ -38,3 +37,5 @@ else {
 }
 console.log("let: " + z);// Error: z is not defined in this scope
 
+
+*/
