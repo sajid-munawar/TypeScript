@@ -15,3 +15,7 @@ in tsconfig.js add:
 
 ` "module": "NodeNext",          `
 ` "moduleResolution": "NodeNext",`
+
+install packages using npm:
+`npm i inquirer`
+`npm i @types/inquirer -D`
