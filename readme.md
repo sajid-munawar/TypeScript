@@ -1,0 +1,1 @@
+**This repository is for typescript learning and projects**
