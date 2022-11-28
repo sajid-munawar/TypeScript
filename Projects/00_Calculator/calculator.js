@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import chalk from 'chalk';
+// import chalkAnimation from 'chalk-animation';
 const welcome = (msg) => {
     console.log(chalk.bgCyan(msg));
     //    let wmsg= chalkAnimation.rainbow(msg)
