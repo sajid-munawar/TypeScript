@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
 import chalk from 'chalk';
-import chalkAnimation from 'chalk-animation';
+// import chalkAnimation from 'chalk-animation';
 
 const welcome = (msg: string) => {
     console.log(chalk.bgCyan(msg))
