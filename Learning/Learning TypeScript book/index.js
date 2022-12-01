@@ -1,5 +1,6 @@
 "use strict";
 // Union
+Object.defineProperty(exports, "__esModule", { value: true });
 let thinker = null;
 if (Math.random() > 0.5) {
     thinker = 'Ok';
@@ -40,7 +41,7 @@ if (geneticist) {
 // geneticist.toUpperCase();
 // Error: Object is possibly 'undefined'.
 geneticist && geneticist.toUpperCase();
-geneticist === null || geneticist === void 0 ? void 0 : geneticist.toUpperCase();
+geneticist?.toUpperCase();
 const hasBoth = {
     firstName: "Lucille",
     lastName: "Clifton",
