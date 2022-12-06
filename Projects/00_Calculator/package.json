@@ -1,11 +1,11 @@
 {
-  "name": "calculator-by-sajid",
-  "version": "1.0.0",
+  "name": "00_calculator",
+  "version": "1.1.0",
   "description": "**Steps**",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "calculator-by-sajid": "calculator.js"
+    "00_calculator": "calculator.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
