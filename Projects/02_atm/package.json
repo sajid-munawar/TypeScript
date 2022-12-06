@@ -1,11 +1,11 @@
 {
-  "name": "01_atm",
-  "version": "1.1.0",
+  "name": "00_atm",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "01_atm": "index.js"
+    "00_atm": "index.js"
   },
 
   "scripts": {
