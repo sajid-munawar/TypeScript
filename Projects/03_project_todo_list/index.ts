@@ -7,13 +7,42 @@
 3-Remove/delete a task
 */
 
-console.clear()
 import chalk from 'chalk';
 import figlet from 'figlet';
+import inquirer from 'inquirer';
 
-figlet('Todo List',(err,data)=>{
-    if(err){
-        console.log('Something went wrong...');
+const welcomeTodo=async()=>{
+    await figlet('Todo List',(err,data)=>{
+        if(err){
+            console.log('Something went wrong...');
+        }
+        console.log(chalk.green(data));
+        
+    })
+    
+}
+
+await welcomeTodo();
+
+let todoList=['Meeting with HR','Setup Production','Announce a feature']
+
+const main=async () =>{
+    let q1=await inquirer.prompt([{
+        name:'q1',
+        type:"list",
+        message:'What do you want to do?\n',
+        choices:[
+            'Print todo list',
+            'Add todo tas',
+            'Mark a task as complete',
+            'Remove/delete a completed task'
+        ]        
     }
-    console.log(chalk.green(data));
-})
+    ])
+    return q1.q1
+}
+setTimeout(async()=>{
+    let q1=await main();
+    console.log(q1);
+
+},1000)
