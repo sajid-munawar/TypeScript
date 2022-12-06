@@ -1,9 +1,12 @@
 {
-  "name": "01_number_guessing-game",
+  "name": "00_number_guessing_game",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "00_number_guessing_game": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
