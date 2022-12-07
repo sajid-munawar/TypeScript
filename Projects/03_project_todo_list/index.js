@@ -3,7 +3,8 @@
 1-Print todo list
 2-Add todo task
 3-Mark a task as complete
-3-Remove/delete a task
+4-See completed tasks
+5-Remove/delete completed task
 */
 import chalk from 'chalk';
 import figlet from 'figlet';
@@ -18,6 +19,7 @@ const welcomeTodo = async () => {
 };
 await welcomeTodo();
 let todoList = ['Meeting with HR', 'Setup Production', 'Announce a feature'];
+let completedTasks = ['Breakfast'];
 const main = async () => {
     let q1 = await inquirer.prompt([{
             name: 'q1',
@@ -27,13 +29,21 @@ const main = async () => {
                 'Print todo list',
                 'Add todo task',
                 'Mark a task as complete',
+                'See completed tasks',
                 'Remove/delete a completed task',
-                'Exit'
+                'Exit' //done
             ]
         }
     ]);
     return q1.q1;
 };
+//Print todo list
+const printTodoList = (todoList) => {
+    for (let i = 0; i < todoList.length; i++) {
+        console.log(chalk.yellow(`${i + 1}-${todoList[i]}`));
+    }
+};
+//Add new todo task
 const addTodo = async (todoList) => {
     let userAnswer = await inquirer.prompt([{
             name: 'newTodo',
@@ -48,13 +58,17 @@ const action = async () => {
         let q1 = await main();
         switch (q1) {
             case 'Print todo list':
-                for (let i = 0; i < todoList.length; i++) {
-                    console.log(chalk.yellow(`${i + 1}-${todoList[i]}`));
-                }
+                printTodoList(todoList);
                 await action();
                 break;
             case 'Add todo task':
                 todoList = await addTodo(todoList);
+                await action();
+                break;
+            case 'See completed tasks':
+                for (let i = 0; i < completedTasks.length; i++) {
+                    console.log(chalk.strikethrough.green(`${i + 1}-${completedTasks[i]}`));
+                }
                 await action();
                 break;
             case 'Exit':
