@@ -25,7 +25,7 @@ const main = async () => {
             message: 'What do you want to do?\n',
             choices: [
                 'Print todo list',
-                'Add todo tas',
+                'Add todo task',
                 'Mark a task as complete',
                 'Remove/delete a completed task'
             ]
@@ -35,5 +35,13 @@ const main = async () => {
 };
 setTimeout(async () => {
     let q1 = await main();
-    console.log(q1);
+    switch (q1) {
+        case 'Print todo list':
+            for (let i of todoList) {
+                console.log(chalk.yellow(i));
+            }
+            break;
+        default:
+            break;
+    }
 }, 1000);
