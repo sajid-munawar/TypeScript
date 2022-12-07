@@ -27,21 +27,41 @@ const main = async () => {
                 'Print todo list',
                 'Add todo task',
                 'Mark a task as complete',
-                'Remove/delete a completed task'
+                'Remove/delete a completed task',
+                'Exit'
             ]
         }
     ]);
     return q1.q1;
 };
-setTimeout(async () => {
-    let q1 = await main();
-    switch (q1) {
-        case 'Print todo list':
-            for (let i of todoList) {
-                console.log(chalk.yellow(i));
-            }
-            break;
-        default:
-            break;
-    }
-}, 1000);
+const addTodo = async (todoList) => {
+    let userAnswer = await inquirer.prompt([{
+            name: 'newTodo',
+            type: 'input',
+            message: 'Please add a todo'
+        }]);
+    todoList.push(userAnswer.newTodo);
+    return todoList;
+};
+const action = async () => {
+    setTimeout(async () => {
+        let q1 = await main();
+        switch (q1) {
+            case 'Print todo list':
+                for (let i = 0; i < todoList.length; i++) {
+                    console.log(chalk.yellow(`${i + 1}-${todoList[i]}`));
+                }
+                await action();
+                break;
+            case 'Add todo task':
+                todoList = await addTodo(todoList);
+                await action();
+                break;
+            case 'Exit':
+                console.log(chalk.blue('Thank you for using todo list app.'));
+            default:
+                break;
+        }
+    }, 500);
+};
+await action();
