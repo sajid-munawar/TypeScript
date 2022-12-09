@@ -19,7 +19,7 @@ const welcomeTodo = async () => {
 };
 await welcomeTodo();
 let todoList = ['Meeting with HR', 'Setup Production', 'Announce a feature'];
-let completedTasks = ['Breakfast'];
+let completedTasksArr = ['Breakfast'];
 const main = async () => {
     let q1 = await inquirer.prompt([{
             name: 'q1',
@@ -53,6 +53,16 @@ const addTodo = async (todoList) => {
     todoList.push(userAnswer.newTodo);
     return todoList;
 };
+// Mark a task as complete
+const markComplete = async () => {
+    let ans = await inquirer.prompt([{
+            name: 'completed',
+            type: 'list',
+            message: 'Please select a completed task!',
+            choices: todoList
+        }]);
+    return ans.completed;
+};
 const action = async () => {
     setTimeout(async () => {
         let q1 = await main();
@@ -65,14 +75,21 @@ const action = async () => {
                 todoList = await addTodo(todoList);
                 await action();
                 break;
+            case 'Mark a task as complete':
+                let completedTask = await markComplete();
+                completedTasksArr.push(completedTask);
+                todoList.splice(todoList.indexOf(completedTask), 1);
+                await action();
+                break;
             case 'See completed tasks':
-                for (let i = 0; i < completedTasks.length; i++) {
-                    console.log(chalk.strikethrough.green(`${i + 1}-${completedTasks[i]}`));
+                for (let i = 0; i < completedTasksArr.length; i++) {
+                    console.log(chalk.strikethrough.green(`${i + 1}-${completedTasksArr[i]}`));
                 }
                 await action();
                 break;
             case 'Exit':
                 console.log(chalk.blue('Thank you for using todo list app.'));
+                break;
             default:
                 break;
         }
