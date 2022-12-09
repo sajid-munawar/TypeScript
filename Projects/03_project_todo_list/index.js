@@ -63,6 +63,16 @@ const markComplete = async () => {
         }]);
     return ans.completed;
 };
+//Remove/delete a completed task
+const removeTask = async () => {
+    let ans = await inquirer.prompt([{
+            name: 'removed',
+            type: 'list',
+            message: 'Please select a completed task!',
+            choices: completedTasksArr
+        }]);
+    return ans.removed;
+};
 const action = async () => {
     setTimeout(async () => {
         let q1 = await main();
@@ -85,6 +95,11 @@ const action = async () => {
                 for (let i = 0; i < completedTasksArr.length; i++) {
                     console.log(chalk.strikethrough.green(`${i + 1}-${completedTasksArr[i]}`));
                 }
+                await action();
+                break;
+            case 'Remove/delete a completed task':
+                let removedTask = await removeTask();
+                completedTasksArr.splice(completedTasksArr.indexOf(removedTask), 1);
                 await action();
                 break;
             case 'Exit':
