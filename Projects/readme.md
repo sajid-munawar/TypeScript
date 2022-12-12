@@ -4,7 +4,7 @@
 `npx 00_todo_list`  
 `00_currency_converter`  
 
-**To setup a project**
+**To setup a project**  
 `npm init -y`  
 `tsc --init`  
 `npm i inquirer chalk figlet`  
