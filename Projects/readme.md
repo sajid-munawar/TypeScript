@@ -3,6 +3,7 @@
 `npx 00_atm`  
 `npx 00_todo_list`  
 `00_currency_converter`  
+`00_word_counter`  
 
 **To setup a project**  
 `npm init -y`  
