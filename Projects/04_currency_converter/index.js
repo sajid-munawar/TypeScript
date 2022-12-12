@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 import chalk from 'chalk';
 import figlet from 'figlet';
+import currency_list from './currencies.js';
 const welcomeMsg = async () => {
     await figlet('Currency Converter', (err, data) => {
         if (err) {
@@ -10,3 +11,9 @@ const welcomeMsg = async () => {
     });
 };
 await welcomeMsg();
+const main = async () => {
+    setTimeout(() => {
+        console.log('==>', currency_list);
+    }, 1000);
+};
+await main();
