@@ -14,3 +14,7 @@ Narrowing
 Narrowing is when TypeScript infers from your code that a value is of a
 more specific type than what it was defined, declared, or previously inferred
 as
+
+Assignment Narrowing  
+If you directly assign a value to a variable, TypeScript will narrow the
+variable’s type to that value’s type.
