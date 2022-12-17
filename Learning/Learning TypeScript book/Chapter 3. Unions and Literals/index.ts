@@ -96,3 +96,22 @@ specificallyAda = "Byron";
 let someString = ""; // Type: string
 specificallyAda = someString;
 // Error: Type 'string' is not assignable to type '"Ada"'.
+
+// Truthiness Narrowing
+
+let geneticist = Math.random() > 0.5
+? "Barbara McClintock"
+: undefined;
+if (geneticist) {
+geneticist.toUpperCase(); // Ok: string
+}
+geneticist.toUpperCase();
+// Error: Object is possibly 'undefined'.
+
+geneticist && geneticist.toUpperCase()
+geneticist?.toUpperCase();
+
+let myStr=''
+
+//biologist: string | false
+let biologist = Math.random() > 0.5 && "Rachel Carson";
