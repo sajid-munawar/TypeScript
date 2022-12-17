@@ -22,3 +22,7 @@ variable’s type to that value’s type.
 Conditional Checks  
 A common way to get TypeScript to narrow a variable’s value is to write an
 if statement checking the variable for being equal to a known value.
+
+Typeof Checks
+In addition to direct value checking, TypeScript also recognizes the typeof
+operator in narrowing down variable types.
