@@ -28,3 +28,61 @@ physicist.toFixed();
 // Error: Property 'toFixed' does not exist on type 'string | number'.
 //
 Property 'toFixed' does not exist on type 'string'.
+
+//Assignment Narrowing
+let admiral: number | string;
+admiral = "Grace Hopper";
+admiral.toUpperCase(); // Ok: string
+admiral.toFixed();
+
+// Conditional Checks
+// Type of scientist: number | string
+let scientist = Math.random() > 0.5
+? "Rosalind Franklin"
+: 51;
+if (scientist === "Rosalind Franklin") {
+// Type of scientist: string
+scientist.toUpperCase(); // Ok
+}
+// Type of scientist: number | string
+scientist.toUpperCase();
+//
+~~~~~~~~~~~
+// Error: Property 'toUpperCase' does not exist on type 'string | number'.
+//
+Property 'toUpperCase' does not exist on type 'number'.
+
+//Typeof Checks
+let researcher = Math.random() > 0.5
+? "Rosalind Franklin"
+: 51;
+if (typeof researcher === "string") {
+researcher.toUpperCase(); // Ok: string
+}
+
+// Logical negations from ! and else statements work as well:
+if (!(typeof researcher === "string")) {
+researcher.toFixed(); // Ok: number
+} else {
+researcher.toUpperCase(); // Ok: string
+}
+
+// rewritten with a ternary statement
+typeof researcher === "string" ? researcher.toUpperCase() // Ok: string
+: researcher.toFixed(); // Ok: number
+
+// Literal Types
+
+//name: "Sajid"
+const name='Sajid';
+
+let age:boolean;
+age=true;
+age=false
+
+let lifespan: number | "ongoing" | "uncertain";
+lifespan = 89; // Ok
+lifespan = "ongoing"; // Ok
+lifespan = true;
+// Error: Type 'true' is not assignable to
+// type 'number | "ongoing" | "uncertain"'
