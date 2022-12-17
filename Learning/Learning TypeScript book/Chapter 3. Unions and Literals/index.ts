@@ -86,3 +86,13 @@ lifespan = "ongoing"; // Ok
 lifespan = true;
 // Error: Type 'true' is not assignable to
 // type 'number | "ongoing" | "uncertain"'
+
+// Literal Assignability
+
+let specificallyAda: "Ada";
+specificallyAda = "Ada"; // Ok
+specificallyAda = "Byron";
+// Error: Type '"Byron"' is not assignable to type '"Ada"'.
+let someString = ""; // Type: string
+specificallyAda = someString;
+// Error: Type 'string' is not assignable to type '"Ada"'.
