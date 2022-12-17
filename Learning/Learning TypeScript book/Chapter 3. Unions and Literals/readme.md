@@ -26,3 +26,13 @@ if statement checking the variable for being equal to a known value.
 Typeof Checks  
 In addition to direct value checking, TypeScript also recognizes the typeof
 operator in narrowing down variable types.
+
+Type Aliases  
+TypeScript includes type aliases for assigning easier names to reused types.
+A type alias starts with the type keyword, a new name, =, and then any
+type. By convention, type aliases are given names in PascalCase:
+
+`type MyName = ...;`
+
+Type aliases act as a copy-and-paste in the type system. When TypeScript
+sees a type alias, it acts as if you’d typed out the actual type the alias wasreferring to.

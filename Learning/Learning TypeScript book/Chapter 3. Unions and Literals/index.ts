@@ -115,3 +115,6 @@ let myStr=''
 
 //biologist: string | false
 let biologist = Math.random() > 0.5 && "Rachel Carson";
+
+let mathematician1: string;
+mathematician1?.length;
