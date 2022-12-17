@@ -18,3 +18,7 @@ as
 Assignment Narrowing  
 If you directly assign a value to a variable, TypeScript will narrow the
 variable’s type to that value’s type.
+
+Conditional Checks  
+A common way to get TypeScript to narrow a variable’s value is to write an
+if statement checking the variable for being equal to a known value.
