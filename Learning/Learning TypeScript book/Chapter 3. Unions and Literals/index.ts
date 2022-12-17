@@ -118,3 +118,16 @@ let biologist = Math.random() > 0.5 && "Rachel Carson";
 
 let mathematician1: string;
 mathematician1?.length;
+
+
+
+// Type Aliases
+type RawData = boolean | number | string | null | undefined;
+let rawDataFirst: RawData;
+let rawDataSecond: RawData;
+let rawDataThird: RawData;
+
+// Combining Type Aliases
+type Id = number | string;
+// Equivalent to: number | string | undefined | null
+type IdMaybe = Id | undefined | null;
